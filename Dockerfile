@@ -32,7 +32,9 @@ RUN pip install google-api-core
 RUN pip install google.cloud.bigquery
 RUN pip install google.cloud.storage
 RUN pip install --upgrade google-api-python-client
-
+RUN pip install sqlalchemy-bigquery
+RUN pip install pybigquery
+RUN pip install --no-cache-dir pybigquery==0.4.10
 # Specify the startup script as the entry point
 COPY startup.sh ./startup.sh
 COPY bootstrap.sh /app/docker/docker-bootstrap.sh
